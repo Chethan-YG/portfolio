@@ -1,7 +1,27 @@
 import React from "react";
 import "./About.css";
 
+
+const skills = [
+  "Java",
+  "Spring Framework",
+  "Spring Boot",
+  "Hibernate",
+  "REST API",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Bootstrap",
+  "React",
+  "SQL",
+  "Git",
+];
+
 export default function About() {
+  const scrollToContact = () => {
+    document.getElementById("Contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="about bg-light">
       <div
@@ -64,9 +84,9 @@ export default function About() {
               appreciate hearing from you.
             </p>
             <div>
-              <a href="#Contact">
-                <button className="my-btn">Contact</button>
-              </a>
+              <button className="my-btn" onClick={scrollToContact}>
+                Contact
+              </button>
             </div>
           </div>
 
@@ -86,17 +106,4 @@ export default function About() {
   );
 }
 
-const skills = [
-  "Java",
-  "Spring Framework",
-  "Spring Boot",
-  "Hibernate",
-  "REST API",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Bootstrap",
-  "React",
-  "SQL",
-  "Git",
-];
+
