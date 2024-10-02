@@ -28,7 +28,7 @@ export default function Home() {
               the overall product.
             </p>
           </div>
-          <a href="#Projects">
+          <a href="/Projects">
             <button className="my-btn">Projects</button>
           </a>
         </div>

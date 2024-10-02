@@ -19,7 +19,6 @@ const Navbar = () => {
   };
 
   const handleNavClick = (id) => {
-    // Scroll to the section without changing the URL
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
