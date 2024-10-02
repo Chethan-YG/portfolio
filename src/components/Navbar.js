@@ -1,9 +1,22 @@
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import profile from "../images/profile.jpg";
+
+
+const navItems = [
+  { id: "Home", label: "HOME" },
+  { id: "About", label: "ABOUT" },
+  { id: "Projects", label: "PROJECTS" },
+  { id: "Contact", label: "CONTACT" }
+];
+
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate(); // Add the useNavigate hook
+  const navigate = useNavigate(); 
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -11,14 +24,13 @@ const Navbar = () => {
 
   const handleNavClick = (id) => {
     if (location.pathname !== "/") {
-      // If you're not on the homepage, navigate to the homepage first
       navigate("/");
     }
     // Scroll to the section after navigation
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
-    }, 100); // Small timeout to ensure smooth navigation after page load
+    }, 100); 
   };
 
   return (
