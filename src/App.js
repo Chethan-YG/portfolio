@@ -9,15 +9,12 @@ import Footer from "./components/Footer";
 import Case1 from "./components/case1";
 import Case2 from "./components/case2";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
- 
-
   return (
     <>
-      <Router basename="/portfolio">
+      <Router>
         <Navbar />
         <Routes>
           <Route
@@ -40,8 +37,8 @@ function App() {
               </>
             }
           />
-          <Route exact path="/Case1" element={<Case1/>} />
-          <Route exact path="/Case2" element={<Case2/>} />
+          <Route exact path="/Case1" element={<Case1 />} />
+          <Route exact path="/Case2" element={<Case2 />} />
         </Routes>
         <Footer />
       </Router>
