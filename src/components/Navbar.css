@@ -1,0 +1,52 @@
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-link:hover, .myname:hover {
+  color: #ff000d;
+}
+
+.myname, .navbar-brand {
+  font-size: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Navbar collapse transition */
+.navbar-collapse {
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .navbar-collapse {
+      max-height: 0;
+      transition: max-height 0.3s ease-out;
+  }
+
+  .navbar-collapse.show {
+      max-height: 500px; /* Adjust this value as needed */
+      transition: max-height 0.5s ease-in;
+  }
+
+  .navbar-collapse .navbar-nav .nav-item {
+      background-color: white;
+      width: 100%;
+      text-align: right;
+      margin-left: auto;
+      border-top: 1px solid #ebe9e9;
+  }
+}
+
+@media (min-width: 801px) {
+  .navbar-collapse {
+      max-height: none; /* Ensure items are visible on larger screens */
+      transition: none; /* No transition needed for larger screens */
+  }
+
+  .navbar-collapse.show {
+      max-height: none; /* Ensure items are visible on larger screens */
+      transition: none; /* No transition needed for larger screens */
+  }
+}

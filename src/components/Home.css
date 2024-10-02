@@ -1,0 +1,93 @@
+.home-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero__socials {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  transform: translateY(-50%);
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.5rem;
+  width: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 46.25em) {
+  .home-hero__socials {
+    display: none;
+  }
+}
+
+.home-hero__social {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.home-hero__social-icon-link {
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  transition: background 0.3s;
+  border-radius: 5px;
+}
+
+.home-hero__social-icon-link:hover {
+  background: #fcf0f0;
+}
+
+.home-hero__social-icon {
+  width: 100%;
+  font-size: 2rem;
+  color: black;
+}
+
+.home-hero__mouse-scroll-cont {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .home-hero__mouse-scroll-cont {
+    display: none;
+  }
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 27px;
+  }
+}

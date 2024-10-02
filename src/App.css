@@ -1,38 +1,174 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 59%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 65%;
+  }
+}
+
+.my-btn {
+  background: #ff000d;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  transition: transform 0.3s;
+  font-size: 2rem;
+  margin-top: 5rem;
+  padding: 1.2rem 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.my-btn:hover {
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Main Container */
+.my_main_container {
+  padding: 8rem 0;
+}
+
+.my_main_text {
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 3.5rem;
+  position: relative;
+  color: #111;
+}
+
+.my_main_text::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 3rem;
+  background: #ff000d !important;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.my_main_msg {
+  text-align: center;
+  color: #555;
+  font-size: 2rem;
+  font-weight: 500;
+  max-width: 70rem;
+  margin: auto;
+  line-height: 1.6;
+  margin-bottom: 10rem;
+}
+
+.container {
+  color: #fff;
+  background: linear-gradient(
+      to right,
+      rgba(250, 250, 250, 0.8),
+      rgba(250, 250, 250, 0.8)
+    ),
+    url("C:\Users\cheth\Portfolio\portfolio\src\common-bg.svg");
+  background-position: center;
+  min-height: 80rem;
+  max-height: 90rem;
+  max-width: 100%;
+  position: relative;
+}
+
+.col-lg-10 {
+  position: relative;
+  top: 20rem;
+}
+
+.heading-primary {
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #111;
+  font-weight: 800;
+}
+
+.mytext {
+  color: #333;
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-primary {
+    font-size: 6rem;
   }
-  to {
-    transform: rotate(360deg);
+  .mytext {
+    font-size: 2rem;
   }
+}
+
+@media only screen and (max-width: 390px) {
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .mytext {
+    font-size: 1.5rem;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.6rem;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #666;
+}
+
+.my_case_info {
+  font-size: 1.8rem;
+  color: #666;
+  text-align: justify;
+  letter-spacing: 0;
 }
