@@ -10,6 +10,10 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const scrollToProjects = () => {
+    document.getElementById("Projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div>
       <div className="row justify-content-center text-center container m-0">
@@ -28,9 +32,7 @@ export default function Home() {
               the overall product.
             </p>
           </div>
-          <a href="/#/Projects">
-            <button className="my-btn">Projects</button>
-          </a>
+          <button className="my-btn" onClick={scrollToProjects}>Projects</button>
         </div>
 
         <div className="home-hero__socials">
