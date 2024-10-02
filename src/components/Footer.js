@@ -2,6 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { socialLinks } from "./socialLinks"; 
 export default function Footer() {
+  const scrollToHome = () => {
+    document.getElementById("Home")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   return (
     <footer className="text-white bg-black footer">
       <div className="mycontainer px-5">
@@ -47,9 +52,9 @@ export default function Footer() {
           <p className="text-center py-4">
             &copy; Copyright{" "}
             <span id="currentYear">{new Date().getFullYear()}</span>. Made by
-            <a href="#Home" className="text-white fw-bold ms-2">
+            <button onClick={scrollToHome} className="btn btn-link text-white fw-bold ms-2">
               CHETHAN Y G
-            </a>
+            </button>
           </p>
         </div>
       </div>
